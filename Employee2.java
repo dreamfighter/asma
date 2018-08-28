@@ -4,7 +4,7 @@ public class Employee2{
     String loker;
     double gaji;
     
-public Employee(String nama){
+public Employee2(String nama){
     this.nama = nama;
 }
 
@@ -29,10 +29,11 @@ public void tampilkanEmployee(){
 
 public static void main (String args[]){
 	//coment hasma
-    Employee pegawai1 = new Employee ("Hasma");
-    pegawai1.setUsia(28);
-    pegawai1.setLoker("Dosen");
-    pegawai1.setGaji(5000000);
+	
+    Employee2 pegawai1 = new Employee2 (args[0]);
+    pegawai1.setUsia(Integer.parseInt(args[1]));
+    pegawai1.setLoker(args[2]);
+    pegawai1.setGaji(Float.parseFloat(args[3]));
     pegawai1.tampilkanEmployee();
     
 }
