@@ -28,7 +28,7 @@ public void tampilkanEmployee(){
 }
 
 public static void main (String args[]){
-	//com
+	//coment hasma
     Employee pegawai1 = new Employee ("Hasma");
     pegawai1.setUsia(28);
     pegawai1.setLoker("Dosen");
