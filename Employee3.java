@@ -1,7 +1,8 @@
 import java.io.*;
+import java.util.*;
 public class Employee3{
     String nama;
-    int usia;
+    int umur;
     String loker;
     double gaji;
     
@@ -10,7 +11,7 @@ public Employee3(String nama){
 }
 
 public void setUsia(int age){
-    usia = age;
+    umur = age;
 }
 
 public void setLoker(String pekerjaan){
@@ -23,34 +24,45 @@ public void setGaji(double salary){
 
 public void tampilkanEmployee(){
     System.out.println ("Nama Pegawai : "+nama);
-    System.out.println ("Umur   : "+usia);
+    System.out.println ("Umur   : "+umur);
     System.out.println ("Jenis Pekerjaan : "+loker);
     System.out.println ("Jumlah Gaji : "+gaji);
 }
 
 public static void main (String args[])throws IOException{
 	//pake input stream
-	try {
-	InputStreamReader input = new InputStreamReader(System.in);
+	//try {
+	//InputStreamReader input = new InputStreamReader(System.in);
 	//OutputStream output = new FileOutputStream();
 	
+	Scanner sc = new Scanner(System.in);	
 	System.out.print ("Masukan nama pegawai : ");
-	String nama = new String(input.read());
+	String nama = sc.nextLine();
 	
 	System.out.print ("Masukan umur pegawai : ");
-	int umur = input.read();
-	
-	System.out.print ("Masukan Jenis Pekerjaan : ");
-	String pekerjaan = new String(input.read());
+	int umur = sc.nextInt();
 	
 	System.out.print ("Masukan Gaji pegawai : ");
-	Float gaji = new Float(input.read());
+	Float gaji = sc.nextFloat();
 	
-	Employee3 pegawai = new Employee3("");
-	pegawai.tampilkanEmployee();
-    } catch (IOException e){
-		System.out.println("Exception Error");
-	}
+	System.out.print ("Masukan Jenis Pekerjaan : ");
+	String pekerjaan = sc.nextLine();
+	
+	System.out.println ("");		
+	System.out.println ("==========");	
+	System.out.println ("Data Pegawai : ");
+	System.out.println ("==========");	
+	
+	//Employee3 pegawai = new Employee3("");
+	System.out.println ("Nama pegawai: "+nama);
+	System.out.println ("Umur pegawai: "+umur);
+	System.out.println ("Jenis Pekerjaan: "+pekerjaan);
+	System.out.println ("Gaji: "+gaji);
+	
+	//pegawai.tampilkanEmployee();
+    // } catch (IOException e){
+		//System.out.println("Exception Error");
+	//}
 	
 }
 }
